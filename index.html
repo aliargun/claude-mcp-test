@@ -12,6 +12,22 @@
             padding: 20px;
             background-color: #f0f2f5;
         }
+        nav {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: #1a73e8;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         h1 {
             color: #1a73e8;
             text-align: center;
@@ -24,6 +40,7 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
         h2 {
             color: #333;
@@ -33,14 +50,91 @@
         p {
             color: #555;
         }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .contact-form {
+            display: grid;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <h1>Welcome!</h1>
-    <div class="content">
+    
+    <div id="about" class="content">
         <h2>About</h2>
-        <p>This is a simple webpage created by Claude.</p>
-        <p>This page demonstrates a basic HTML structure that we'll enhance with CSS later.</p>
+        <p>This is a simple webpage created by Claude, showcasing various sections and features.</p>
+        <p>We've enhanced this page with navigation, multiple sections, and improved styling.</p>
+    </div>
+
+    <div id="features" class="content">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3>Responsive Design</h3>
+                <p>Looks great on all devices</p>
+            </div>
+            <div class="feature-item">
+                <h3>Modern Layout</h3>
+                <p>Clean and professional design</p>
+            </div>
+            <div class="feature-item">
+                <h3>Easy Navigation</h3>
+                <p>Simple and intuitive menu</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="content">
+        <h2>Sample Projects</h2>
+        <p>Here are some of our recent projects:</p>
+        <ul>
+            <li>Website Redesign</li>
+            <li>Mobile App Development</li>
+            <li>E-commerce Platform</li>
+        </ul>
+    </div>
+
+    <div id="contact" class="content">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 </body>
 </html>
